@@ -18,6 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
 	install = {
-		colorscheme = { "rose-pine", "habamax" },
+		colorscheme = { "gruvbox-material", "habamax" },
 	},
 })
