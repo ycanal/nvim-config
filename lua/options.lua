@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
