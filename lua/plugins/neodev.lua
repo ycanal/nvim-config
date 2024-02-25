@@ -1,3 +1,5 @@
 return {
-    { "folke/neodev.nvim", opts = {} }
+    --setup for init.lua and plugin development
+    "folke/neodev.nvim",
+    opts = {}
 }
