@@ -2,11 +2,6 @@ return {
     -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
 
-    { -- Comment region using gc
-        'numToStr/Comment.nvim',
-        opts = {}
-    },
-
     { -- Highlight todo, notes, etc in comments
         'folke/todo-comments.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
@@ -54,6 +49,11 @@ return {
             --  You could remove this setup call if you don't like it,
             --  and try some other statusline plugin
             require('mini.statusline').setup()
+
+            -- Comment lines
+            -- - gc  - Toggle comment (like `gcip` - comment inner paragraph) for both
+            -- - gcc - Toggle comment on current line
+            require('mini.comment').setup()
 
             -- ... and there is more!
             --  Check out: https://github.com/echasnovski/mini.nvim
