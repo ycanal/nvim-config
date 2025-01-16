@@ -232,7 +232,7 @@ return {
 				scala = { "scalafmt" },
 				rust = { "rustfmt" },
 				go = { "goimports", "gofmt" }, -- Conform will run multiple formatters sequentially
-				javascript = { { "prettierd", "prettier" } }, -- Use a sub-list to run only the first available formatter
+				javascript = { "prettierd", "prettier", stop_after_first = true }, -- Use a sub-list to run only the first available formatter
 			},
 		},
 	},
@@ -359,8 +359,9 @@ return {
 			{
 				"<leader>tt",
 				function()
-					require("trouble").toggle()
+					require("trouble").toggle("diagnostics")
 				end,
+				desc = "Trouble: [T]oggle Diagnostics",
 			},
 		},
 	},
